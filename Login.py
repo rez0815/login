@@ -1,13 +1,13 @@
 
 print("Hallo! Wilkommen beim Login! Bitte die nun folgenden Fragen wahrheitsgemäß beantworten: ")
 
-
+user = ["username", "password", 1990, 3, 18, "lfarbe", "notes"]
 def correctinfo():
 
     correcting = True
     while correcting:
 
-        corr = input("Was möchten Sie korrigieren? (Name, Geburtstag, Lieblingsfarbe, Notizen ")
+        corr = input("Was möchten Sie korrigieren? (Name, Geburtstag, Lieblingsfarbe, Notizen )")
 
         if corr == "Name":
             user[0] = input("Bitte Name eingeben: ")
@@ -32,6 +32,12 @@ def correctinfo():
 
 
 def askcorr():
+
+    print("Bitte überprüfe nun die Korrektheit deiner Angaben: ")
+    print("Username: ", user[0])
+    print("Geburtsdatum: ", user[2], user[3], user[4])
+    print("Lieblingsfarbe: ", user[5])
+    print("Notizen: ", user[6])
     correct2 = input("Sind deine Daten jetzt korrekt? (y/n)")
 
     if correct2 == "y":
@@ -70,7 +76,6 @@ def register():
 while True:
 
     regorlog = input("Möchten Sie sich registrieren (r) oder einloggen (l): ")
-    user = ["username", "password", 1990, 3, 18, "lfarbe", "notes"]
 
     if regorlog == "r":
 
